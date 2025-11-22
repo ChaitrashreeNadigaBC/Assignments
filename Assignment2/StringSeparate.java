@@ -5,6 +5,7 @@ public class StringSeparate {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a string: ");
         String s = sc.next();
+        s = s.toLowerCase();
         String letters = "";
         String digits = "";
 

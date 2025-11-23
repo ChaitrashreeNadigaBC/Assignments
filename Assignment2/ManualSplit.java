@@ -2,7 +2,7 @@ public class ManualSplit {
     public static void main(String[] args) {
         String input = "Hello world this is me";
 
-        // First, count how many words there are
+        // count the numbers of words in a string
         int wordCount = 1; // at least 1 word if string is not empty
         for (int i = 0; i < input.length(); i++) {
             if (input.charAt(i) == ' ') {
@@ -28,6 +28,15 @@ public class ManualSplit {
                 word += ch;              // build word
             }
         }
+        words[index] = word;
 
+        System.out.print("[");
+        for (int i = 0; i < words.length; i++) {
+            System.out.print("\"" + words[i] + "\"");
+            if (i < words.length - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println("]");
     }
 }
